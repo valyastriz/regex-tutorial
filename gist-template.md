@@ -25,29 +25,61 @@ Here’s a simple example: the regex below matches digits only if they are follo
 
 ## Regex Components
 
-### Anchors
+## Anchors
+
 Anchors are used to match a pattern at a specific position in the text, like the beginning or end of a line.
 
-### Quantifiers
+- **Example**: `/^**\d**(?=px)$/`  
+In this regex, `^` is an anchor that asserts the match must be at the beginning of the string, and `$` asserts that it must be at the end.
+
+## Quantifiers
+
 Quantifiers define how many times a character or pattern should appear in the text to make a match.
 
-### Grouping Constructs
+- **Example**: `/^**\d+**(?=px)$/`  
+Here, the `+` is a quantifier that specifies one or more digits must appear for a match.
+
+## Grouping Constructs
+
 Grouping combines parts of a pattern together, often for repeating, capturing, or applying conditions to them.
 
-### Bracket Expressions
+- **Example**: `/^**(\d+)(?=px)**$/`  
+In this regex, the parentheses `(**)` are grouping constructs, capturing one or more digits.
+
+## Bracket Expressions
+
 Bracket expressions match any one of the characters inside the brackets.
 
-### Character Classes
+- **Example**: `/^**[0-9]+**(?=px)$/`  
+Here, `[0-9]` is a bracket expression that matches any digit between 0 and 9.
+
+## Character Classes
+
 Character classes represent groups of characters, like all digits or all letters.
 
-### The OR Operator
-The | symbol allows you to match one pattern or another, like an “either-or” option.
+- **Example**: `/^**\d+**(?=px)$/`  
+The `\d` is a character class shorthand for any digit, equivalent to `[0-9]`.
 
-### Flags
+## The OR Operator
+
+The `|` symbol allows you to match one pattern or another, like an “either-or” option.
+
+- **Example**: `/^**(\d|\w)+**(?=px)$/`  
+The `|` is the OR operator, allowing the match to be either digits (`\d`) or word characters (`\w`).
+
+## Flags
+
 Flags modify how the regex works, like making it case-insensitive.
 
-### Character Escapes
+- **Example**: `/^(\d+)(?=px)$/i`  
+The `i` is a flag that makes the regex case-insensitive. Although not needed here, it’s commonly used when case doesn’t matter.
+
+## Character Escapes
+
 Escapes are used to match special characters or predefined patterns, like digits or spaces.
+
+- **Example**: `/^**\d**(?=\px)$/`  
+The `\d` is a character escape used to match any digit (0-9).
 
 ## Author
 
