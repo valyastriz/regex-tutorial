@@ -38,6 +38,7 @@ Grouping combines parts of a pattern together, often for repeating, capturing, o
 Bracket expressions match any one of the characters inside the brackets.
 
 ### Character Classes
+Character classes represent groups of characters, like all digits or all letters.
 
 ### The OR Operator
 
