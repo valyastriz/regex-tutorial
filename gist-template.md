@@ -41,6 +41,7 @@ Bracket expressions match any one of the characters inside the brackets.
 Character classes represent groups of characters, like all digits or all letters.
 
 ### The OR Operator
+The | symbol allows you to match one pattern or another, like an “either-or” option.
 
 ### Flags
 
