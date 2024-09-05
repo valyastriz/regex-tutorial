@@ -44,6 +44,7 @@ Character classes represent groups of characters, like all digits or all letters
 The | symbol allows you to match one pattern or another, like an “either-or” option.
 
 ### Flags
+Flags modify how the regex works, like making it case-insensitive.
 
 ### Character Escapes
 
