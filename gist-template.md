@@ -32,6 +32,7 @@ Anchors are used to match a pattern at a specific position in the text, like the
 Quantifiers define how many times a character or pattern should appear in the text to make a match.
 
 ### Grouping Constructs
+Grouping combines parts of a pattern together, often for repeating, capturing, or applying conditions to them.
 
 ### Bracket Expressions
 
