@@ -51,4 +51,4 @@ Escapes are used to match special characters or predefined patterns, like digits
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+Written by Valentina Strizheus, a developer with an interest in regex and pattern matching. Find more of my work by visting [My Portfolio](https://valyastriz.github.io/Valya-Strizheus-Portfolio/)
