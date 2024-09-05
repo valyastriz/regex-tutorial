@@ -47,6 +47,7 @@ The | symbol allows you to match one pattern or another, like an “either-or”
 Flags modify how the regex works, like making it case-insensitive.
 
 ### Character Escapes
+Escapes are used to match special characters or predefined patterns, like digits or spaces.
 
 ## Author
 
