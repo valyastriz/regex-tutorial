@@ -26,6 +26,7 @@ Here’s a simple example: the regex below matches digits only if they are follo
 ## Regex Components
 
 ### Anchors
+Anchors are used to match a pattern at a specific position in the text, like the beginning or end of a line.
 
 ### Quantifiers
 
