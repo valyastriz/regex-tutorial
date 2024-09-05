@@ -35,6 +35,7 @@ Quantifiers define how many times a character or pattern should appear in the te
 Grouping combines parts of a pattern together, often for repeating, capturing, or applying conditions to them.
 
 ### Bracket Expressions
+Bracket expressions match any one of the characters inside the brackets.
 
 ### Character Classes
 
