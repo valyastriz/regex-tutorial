@@ -29,57 +29,95 @@ Here’s a simple example: the regex below matches digits only if they are follo
 
 Anchors are used to match a pattern at a specific position in the text, like the beginning or end of a line.
 
-- **Example**: `/^**\d**(?=px)$/`  
-In this regex, `^` is an anchor that asserts the match must be at the beginning of the string, and `$` asserts that it must be at the end.
+- **Example**: `/^hello/`  
+This regex matches the word "hello" **only** if it appears at the **beginning** of the string (because of the `^`).
+
+- **Example**: `/world$/`  
+This regex matches the word "world" **only** if it appears at the **end** of the string (because of the `$`).
+
+---
 
 ## Quantifiers
 
 Quantifiers define how many times a character or pattern should appear in the text to make a match.
 
-- **Example**: `/^**\d+**(?=px)$/`  
-Here, the `+` is a quantifier that specifies one or more digits must appear for a match.
+- **Example**: `/a{3}/`  
+This matches exactly **three** consecutive "a" characters (e.g., "aaa" in "baaa").
+
+- **Example**: `/a+/`  
+This matches **one or more** "a" characters (e.g., "a", "aa", or "aaa").
+
+---
 
 ## Grouping Constructs
 
 Grouping combines parts of a pattern together, often for repeating, capturing, or applying conditions to them.
 
-- **Example**: `/^**(\d+)(?=px)**$/`  
-In this regex, the parentheses `(**)` are grouping constructs, capturing one or more digits.
+- **Example**: `/(abc)+/`  
+This matches one or more instances of "abc" together (e.g., "abc", "abcabc").
+
+- **Example**: `/(\d{3})-(\d{4})/`  
+This matches a three-digit number followed by a hyphen and a four-digit number (e.g., "123-4567"), capturing both parts in separate groups.
+
+---
 
 ## Bracket Expressions
 
 Bracket expressions match any one of the characters inside the brackets.
 
-- **Example**: `/^**[0-9]+**(?=px)$/`  
-Here, `[0-9]` is a bracket expression that matches any digit between 0 and 9.
+- **Example**: `/[aeiou]/`  
+This matches any **single vowel** (a, e, i, o, or u) in a string.
+
+- **Example**: `/[A-Z]/`  
+This matches any **uppercase letter** from A to Z.
+
+---
 
 ## Character Classes
 
 Character classes represent groups of characters, like all digits or all letters.
 
-- **Example**: `/^**\d+**(?=px)$/`  
-The `\d` is a character class shorthand for any digit, equivalent to `[0-9]`.
+- **Example**: `/\d/`  
+This matches any **single digit** (equivalent to `[0-9]`).
+
+- **Example**: `/\w/`  
+This matches any **word character**, including letters, digits, and underscores (equivalent to `[A-Za-z0-9_]`).
+
+---
 
 ## The OR Operator
 
-The `|` symbol allows you to match one pattern or another, like an “either-or” option.
+The `|` symbol allows you to match one pattern or another, like an "either-or" option.
 
-- **Example**: `/^**(\d|\w)+**(?=px)$/`  
-The `|` is the OR operator, allowing the match to be either digits (`\d`) or word characters (`\w`).
+- **Example**: `/cat|dog/`  
+This matches **either** "cat" **or** "dog" in the string.
+
+- **Example**: `/grape|orange|apple/`  
+This matches **any of the words** "grape", "orange", or "apple" in a string.
+
+---
 
 ## Flags
 
 Flags modify how the regex works, like making it case-insensitive.
 
-- **Example**: `/^(\d+)(?=px)$/i`  
-The `i` is a flag that makes the regex case-insensitive. Although not needed here, it’s commonly used when case doesn’t matter.
+- **Example**: `/hello/i`  
+This matches the word "hello" in a **case-insensitive** way, so it will match "Hello", "HELLO", etc. because of the `i` flag.
+
+- **Example**: `/world/m`  
+This enables the **multi-line mode**, allowing `^` and `$` to match at the beginning and end of each line in multi-line text.
+
+---
 
 ## Character Escapes
 
 Escapes are used to match special characters or predefined patterns, like digits or spaces.
 
-- **Example**: `/^**\d**(?=\px)$/`  
-The `\d` is a character escape used to match any digit (0-9).
+- **Example**: `/\./`  
+This matches a **literal period** character `.` in a string, rather than treating it as a wildcard for any character.
+
+- **Example**: `/\d{2}-\d{2}-\d{4}/`  
+This matches a date in the format "dd-mm-yyyy", using `\d` to match digits and `-` as a **literal hyphen**.
 
 ## Author
 
