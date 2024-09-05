@@ -4,7 +4,13 @@ Regular expressions (regex) are useful tools that help you search for patterns i
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+Lookaheads and lookbehinds allow you to match a pattern only if certain conditions are met, like if it’s followed or preceded by another pattern. However, these surrounding patterns aren’t part of the final match. For example, a positive lookahead checks if a pattern is followed by something specific, while a negative lookbehind checks if a pattern is not preceded by something.
+
+Here’s a simple example: the regex below matches digits only if they are followed by “px” but doesn’t include “px” in the match itself:
+
+```regex
+\d(?=px)
+```
 
 ## Table of Contents
 
