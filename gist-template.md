@@ -1,6 +1,6 @@
 # Lookaheads and Lookbehinds in Regular Expressions
 
-Introductory paragraph (replace this with your text)
+Regular expressions (regex) are useful tools that help you search for patterns in text. Lookaheads and lookbehinds are advanced regex features that let you check if a pattern comes before or after another pattern, without including that extra pattern in the final match. These techniques help ensure a match is correct based on the surrounding text, but they don’t capture or include that surrounding text in the result.
 
 ## Summary
 
